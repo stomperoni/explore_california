@@ -1,11 +1,30 @@
-# Comment
+# What can go into a .gitignore file
+
+# Individual files
 tempfile.txt
+tempfile2.txt
 .DS_Store
+
+
+# Wildcards
 *.zip
 *.gz
+*.*~
 log/*.log
+
+
+# Simple regular expressions
+# In this case, files with a log extension, ending in 0-9, and residing in the log directory.
 log/*.log[0-9]
+
+
+# Directories and their contents
 assets/photoshop/
 assets/videos/
+
+
+# Use ! to make exceptions
+# The previous statement ignores assets/videos/
+# This statment makes an exception and allows files in that foler that match tour_*.mp4
 !assets/videos/tour_*.mp4
 
